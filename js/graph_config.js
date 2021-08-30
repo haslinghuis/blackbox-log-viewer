@@ -48,14 +48,14 @@ function GraphConfig(graphConfig) {
                 newGraph = $.extend(
                     // Default values for missing properties:
                     {
-                        height: 1
+                        height: 1,
                     }, 
                     // The old graph
                     graph, 
                     // New fields to replace the old ones:
                     {
-                        fields:[]
-                    }
+                        fields:[],
+                    },
                 ),
                 colorIndex = 0;
             
@@ -544,14 +544,14 @@ GraphConfig.load = function(config) {
                                     offset: 0,
                                     power: 1.0,
                                     inputRange: 1000,
-                                    outputRange: 1.0
+                                    outputRange: 1.0,
                                 };
                             case 'debug[3]': // Clip or Count
                                 return {
                                     offset: -10,
                                     power: 1.0,
                                     inputRange: 10,
-                                    outputRange: 1.0
+                                    outputRange: 1.0,
                                 };
                         }
                         break;
@@ -562,7 +562,7 @@ GraphConfig.load = function(config) {
                                     offset: 0,
                                     power: 1.0,
                                     inputRange: maxDegreesSecond(gyroScaleMargin),
-                                    outputRange: 1.0
+                                    outputRange: 1.0,
                                 };
                             case 'debug[1]': // feedforward delta element
                             case 'debug[2]': // feedforward boost element
@@ -570,30 +570,24 @@ GraphConfig.load = function(config) {
                                     offset: 0,
                                     power: 1.0,
                                     inputRange: 1000,
-                                    outputRange: 1.0
+                                    outputRange: 1.0,
                                 };
                             case 'debug[3]': // rcCommand delta
                                 return {
                                     offset: 0,
                                     power: 1.0,
                                     inputRange: 10000,
-                                    outputRange: 1.0
+                                    outputRange: 1.0,
                                 };
                         }
                         break;
                     case 'FF_LIMIT':
-                        return {
-                            offset: 0,
-                            power: 1.0,
-                            inputRange: 300,
-                            outputRange: 1.0
-                        };
                     case 'FEEDFORWARD_LIMIT':
                         return {
                             offset: 0,
                             power: 1.0,
                             inputRange: 300,
-                            outputRange: 1.0
+                            outputRange: 1.0,
                         };
                 }
             }

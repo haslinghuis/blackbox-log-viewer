@@ -526,8 +526,9 @@ function FlightLogFieldPresenter() {
     };
     
     FlightLogFieldPresenter.presentEnum = function presentEnum(value, enumNames) {
-        if (enumNames[value] === undefined)
+        if (enumNames[value] === undefined) {
             return value;
+        }
         
         return enumNames[value];
     };
@@ -540,8 +541,9 @@ function FlightLogFieldPresenter() {
      * @param value Value of the field
      */
     FlightLogFieldPresenter.decodeFieldToFriendly = function(flightLog, fieldName, value, currentFlightMode) {
-        if (value === undefined)
+        if (value === undefined) {
             return "";
+        }
         
         switch (fieldName) {
             case 'time':
